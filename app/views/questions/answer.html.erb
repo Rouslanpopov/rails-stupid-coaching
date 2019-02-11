@@ -1,0 +1,22 @@
+<div class="contain">
+  <div class="headers">
+    <h1>The Coach:</h1>
+  </div>
+  <p class="text-center"><em>You:</em></p>
+  <div class="my-question">
+    <p><%= @question %> ???</p>
+  </div>
+  <p class="text-center"><em>Your Coach:</em></p>
+  <div class="answer">
+    <% if @question.include?("?") %>
+    <h3>Silly question, get dressed and go to work!</h3>
+    <% elsif @question == "I am going to work" %>
+    <h3>Great!</h3>
+    <% else %>
+    <h3>I don't care, get dressed and go to work!</h3>
+    <% end %>
+  </div>
+  <div class="footer">
+    <%= link_to "return to answer", ask_path %>
+  </div>
+</div>
